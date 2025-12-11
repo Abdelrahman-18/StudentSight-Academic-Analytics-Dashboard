@@ -124,32 +124,68 @@ Benefits:
 
 # 🌟 **Key Features of the Dashboard**
 
+The StudentSight dashboard is designed to give educators a clear, interactive, and intuitive understanding of student performance.  
+Below are screenshots of the main report pages, followed by a detailed explanation of the visualizations and analytical logic behind them.
+
 ![Image](https://github.com/user-attachments/assets/161984af-1c28-42aa-80b8-d4bad8dc0dac)
+
 ![Image](https://github.com/user-attachments/assets/2c1b412c-12e4-4564-89e3-1bf426dd45c0)
 
-### 📌 Modern KPI Insights  
-- Student count  
-- Avg score  
-- Pass rate  
-- Attendance %  
+---
 
-### 📌 Demographic Analytics  
-- Gender distribution  
-- City/region segmentation  
-- Score-based grade clusters  
-- Subject difficulty comparison  
+## 📊 **Dashboard Visualization Overview**
 
-### 📌 Deep Performance Intelligence  
-- Top performers  
-- At-risk students  
-- Score progression  
-- Grade clustering  
+The dashboard delivers a balanced blend of **high-level KPIs**, **analytical charts**, and **student-level drill-downs**, making it easy for teachers and administrators to evaluate academic performance from multiple angles.
 
-### 📌 Attendance vs Achievement  
-Scatter analysis showing how attendance impacts grades.
+It consists of the following major visualization components:
 
-### 📌 Student Drill-Down Profiles  
-Individual analytics for student performance and demographics.
+### **📌 Modern KPI Insights**
+A set of card visuals providing fast, essential metrics, including:
+- Total number of students  
+- Average score across all courses  
+- Overall pass rate  
+- Attendance percentage  
+
+These KPIs serve as the starting point for understanding school-wide academic health.
+
+### **📌 Demographic & Academic Analytics**
+Visualizations designed to help stakeholders understand *who* the students are and *how* they're performing:
+- **Gender breakdown** to view population distribution  
+- **Geographical segmentation** to assess family and regional grouping  
+- **Grade distribution charts** that visually cluster students by performance categories  
+- **Subject and course comparisons** to identify difficult or high-performing subjects  
+
+These charts provide context behind the scores and highlight disparities between student groups.
+
+
+### **📌 Deep Performance Intelligence**
+Focused visuals that uncover patterns in achievement:
+- Ranking tables that showcase **top performers**  
+- Metrics that identify **students at academic risk**  
+- Trend charts showing score progression across terms  
+- Histogram-style visuals for **grade clustering** and score ranges  
+
+These insights help teachers quickly identify outliers—both strong and weak.
+
+
+### **📌 Attendance & Achievement Correlation**
+A dedicated scatter plot showing:
+- Student attendance percentage  
+- Their corresponding average score  
+
+This visualization reveals whether lower attendance is linked to weaker academic performance—an essential metric for early intervention.
+
+
+### **📌 Drill-Down Student Profiles**
+A detailed page designed for individual student analysis:
+- Personal and demographic details  
+- Attendance rate  
+- Overall and course-specific average scores  
+- Assigned grade  
+- City and family data  
+
+This level of granularity supports one-on-one student evaluations and parent-teacher discussions.
+
 
 ---
 
@@ -157,17 +193,24 @@ Individual analytics for student performance and demographics.
 
 ![Image](https://github.com/user-attachments/assets/6f06a3e6-144e-4b1a-b74e-7705c3ffedba)
 
-### 🔗 Optimized Model Design  
-- Snowflake-style dimensional model  
-- Single-direction relationships  
-- Clean filtering paths  
+The Data Model was carefully structured to ensure smooth navigation and accurate analytical calculations:
 
-### 🧮 Key DAX Measures  
-- Average Score  
-- Pass Rate %  
-- Attendance %  
-- Ranking logic  
-- Grade assignment formulas  
+### **🔗 Optimized Model View**
+- The warehouse was imported into Power BI with a **snowflake-style dimensional model**, ensuring clean, one-directional relationships.  
+- Fact tables were connected to their respective dimensions using **single-direction, many-to-one relationships** for reliable filtering.  
+- Only essential relationships were activated to avoid ambiguity and improve performance.
+
+### **🧮 Custom DAX Measures**
+To enable accurate insights, several DAX measures were created, including:
+- **Average Score** (ignoring blanks)  
+- **Pass Rate %** based on dynamic filtering  
+- **Attendance %** aggregated per student and across the whole dataset  
+- **Top N performance measures** used for ranking  
+- **Customized grade assignment logic** for visualization consistency  
+
+These DAX expressions ensured that KPIs and visuals respond instantly to filters, slicers, and drill-down interactions without breaking model integrity.
+
+Together, the dashboard, data model, and DAX logic create a seamless analytical experience—allowing educators to explore high-level trends and drill into individual student stories with ease. 
 
 ---
 
@@ -175,12 +218,12 @@ Individual analytics for student performance and demographics.
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| **Abdelrahman Mohamed Fathi** | **Team Leader & Head of Data Visualization** | **Led the team, managed workflow, directed system architecture, and built the core analytical visuals & dashboard storytelling in Power BI** |
+| **Abdelrahman Mohamed Fathi (ME)** | **Team Leader & Head of Data Visualization** | **Led the team, managed workflow, directed system architecture, and built the core analytical visuals & dashboard storytelling in Power BI** |
 | **Sabry Tarek Sabry** | PySpark ETL Developer & Docker Lead | ETL pipelines, containerization |
 | **Ahmed Osama Ahmed** | SQL Database Architect | Warehouse schema & modeling |
-| **Ahmed Moustafa Mahmoud** | Data Visualization Developer | Power BI visuals & analytics support |
+| **Ahmed Moustafa Mahmoud** | Data Visualization Developer | Power BI visuals & analytics |
 | **Esraa Mahmoud Abdelrahman** | Documentation & Presentation | Final report & content curation |
-| **Yasser Elsayed Mohamed** | Documentation Support | Editing & presentation structure |
+
 
 ---
 
@@ -189,6 +232,6 @@ Individual analytics for student performance and demographics.
 - Personalized dashboards  
 - Predictive analytics (MLlib)  
 - Automated ETL pipelines (Airflow)  
-- Parent & student portal  
+- Interactive app for parents & students 
 - Real-time ingestion  
 
