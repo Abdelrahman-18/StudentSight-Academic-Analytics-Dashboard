@@ -20,7 +20,7 @@ The final platform helps teachers, administrators, and stakeholders monitor acad
 # ❗ Problem & 🎯 Solution Scope
 
 ## 🔍 The Problem
-Schools and training institutions often face recurring issues:
+Educational institutions—schools, academies, and training centers—often face the same recurring challenges:
 
 - Scattered spreadsheets and manual entries  
 - Difficulty identifying struggling students early  
@@ -29,7 +29,7 @@ Schools and training institutions often face recurring issues:
 - Late academic feedback  
 - No standardized data structure or validation  
 
-These gaps cause **delayed interventions**, **inaccurate insights**, and **lost opportunities for improvement**.
+These gaps cause **delayed interventions**, **inaccurate reporting**, and **missed opportunities for improvement**.
 
 ---
 
